@@ -1,16 +1,33 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-a {
-  color: inherit;
-  text-decoration: none;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#06202A] text-gray-300;
+  }
 }
 
 * {
-  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  overflow-y: scroll;
+}
+
+/* Hide scroll bar for chrome, safari and opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scroll bar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
